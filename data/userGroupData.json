@@ -1,0 +1,51 @@
+{
+  "users": [],
+  "groups": [],
+  "antilink": {
+    "120363429626199342@g.us": {
+      "enabled": true,
+      "action": "warn"
+    },
+    "120363425660688829@g.us": {
+      "enabled": true,
+      "action": "warn"
+    },
+    "120363427046604850@g.us": {
+      "enabled": true,
+      "action": "delete"
+    }
+  },
+  "antibadword": {},
+  "warnings": {
+    "120363429626199342@g.us": {
+      "274126992363620@lid": 1
+    },
+    "120363425660688829@g.us": {
+      "274126992363620@lid": 0
+    }
+  },
+  "sudo": [
+    "278615149310102@lid"
+  ],
+  "welcome": {
+    "120363429626199342@g.us": {
+      "enabled": true,
+      "message": "Welcome {user} to {group}! 🎉",
+      "channelId": ""
+    },
+    "120363425660688829@g.us": {
+      "enabled": true,
+      "message": "Welcome {user} to {group}! 🎉",
+      "channelId": ""
+    }
+  },
+  "goodbye": {
+    "120363425660688829@g.us": {
+      "enabled": true,
+      "message": "Goodbye {user} 👋",
+      "channelId": ""
+    }
+  },
+  "chatbot": {},
+  "autoReaction": false
+}
