@@ -962,3 +962,8 @@ module.exports = async function handleMessage(bad, mek, chatUpdate, store) {
         }
     } catch (error) { console.error('❌ Error in message handler:', error.message); }
 };
+
+// Group Join/Leave Event Listener
+bad.ev.on('group-participants.update', async (update) => {
+    await handleGroupParticipantUpdate(bad, update);
+});
