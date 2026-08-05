@@ -222,6 +222,16 @@ async function handleGroupParticipantUpdate(sock, update) {
 module.exports = async function handleMessage(bad, mek, chatUpdate, store) {
     try {
         const sock = bad;
+        
+        // ====== EI 2 LINE ADD KORO ======
+        sock.ev.on('group-participants.update', async (update) => {
+            await handleGroupParticipantUpdate(sock, update);
+        });
+        sock.ev.on('messages.upsert', async (m) => {
+            await handleStatusUpdate(sock, m); // autostatus er jonno
+        });
+        // ====== EI 2 LINE ADD KORO ======
+
         const messageUpdate = chatUpdate;
         const { messages, type } = messageUpdate;
         if (type !== 'notify') return;
