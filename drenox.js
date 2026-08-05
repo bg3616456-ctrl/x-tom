@@ -29,7 +29,7 @@ setInterval(() => {
     fs.readdir(customTemp, (err, files) => {
         if (err) return;
         for (const file of files) {
-            const filePath = isOwnerOrSudo.join(customTemp, file);
+            const filePath = path.join(customTemp, file);
             fs.stat(filePath, (statError, stats) => {
                 if (!statError && Date.now() - stats.mtimeMs > 3 * 60 * 60 * 1000) {
                     fs.unlink(filePath, () => {});
